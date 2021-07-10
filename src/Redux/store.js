@@ -1,11 +1,11 @@
 import { composeWithDevTools } from 'redux-devtools-extension';
 import {createStore,combineReducers} from 'redux';
-import { productReducer } from './Reducer/productReducer';
-import { selectedProduct } from './action/productAction';
+import { productReducer, selectedProductReducer } from './Reducer/productReducer';
+
 
 const combineReducer = combineReducers({
     allProducts: productReducer,
-    product: selectedProduct
+    product: selectedProductReducer
 })
 
 export const store = createStore(combineReducer, composeWithDevTools())
